@@ -30,7 +30,7 @@ stages:
   - job: CodeCoverage
     displayName: Code Coverage
     pool:
-      name: local
+      name: local2
     steps:
       - task: Maven@3
         inputs:
