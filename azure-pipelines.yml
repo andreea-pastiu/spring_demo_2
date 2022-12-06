@@ -16,7 +16,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '6f54efe7-4f33-4806-a363-f1135e0d8803'
   imageRepository: 'andreeapastiuspringdemo2'
-  containerRegistry: 'containerregistryandreeapastiu30442.azurecr.io'
+  containerRegistry: 'containerregistryandreeapastiu304422.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
