@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+
+  mysql_server:
+    image: mysql:latest
+    container_name: mysqlserver
+    ports:
+       - "3306:3306" 
+    environment:
+       MYSQL_ROOT_PASSWORD: 'root'
+       MYSQL_DATABASE: 'city-db' 
+       
+  tomcat-db-api:
+    image: spring_demo
+    container_name: springdemoapp
+    build:
+       context: .
+       dockerfile: Dockerfile
+    ports:
+       - "8080:8080"
+    depends_on:
+       - mysql_server
+    
